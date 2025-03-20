@@ -94,6 +94,9 @@ $(document).on("keydown", function (e) {
       for (let i = 0; i < Number(inputValues[2].val); i++) {
         password_list.push(numbers[Math.floor(Math.random() * numbers.length)]);
       }
+      NewLine("", false);
+      const shuffledPasswordList = shuffleArray(password_list);
+      NewLine("", false);
 
       let password = "";
       for (const char in shuffledPasswordList) {
